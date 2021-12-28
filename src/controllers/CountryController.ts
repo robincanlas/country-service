@@ -18,7 +18,7 @@ export class CountryController extends BaseController {
   @SuccessResponse(201, 'Success')
   @Response(400, 'Bad Request')
   @Response(500, 'Service Error')
-  @Get('{countryName}')
+  @Get('list/{countryName}')
   public async getCountries(@Path() countryName: string): Promise<Country.Get[]> {
     try {
       return await this.positionStackService.getCountries(countryName);  
