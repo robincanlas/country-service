@@ -1,7 +1,7 @@
 {
-  "name": "node-typescript",
+  "name": "country-service",
   "version": "1.0.0",
-  "description": "nodejs using typescript",
+  "description": "country microservice",
   "main": "app.js",
   "scripts": {
     "start:dev": "tsoa spec-and-routes && nodemon ./src/index.ts",
