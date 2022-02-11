@@ -13,8 +13,10 @@ export class PositionStackService {
       return response.data.data;
     })
     .catch(error => {
-      console.warn(error);
-      return null;
+      throw {
+        status: error.response.status,
+        data: error.response.data
+      };
     });
   }
 }

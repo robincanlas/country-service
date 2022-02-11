@@ -25,8 +25,9 @@ export class CountryController extends BaseController {
     } catch (error) {
       console.warn('error fetching countries', error);
       throw {
-        status: 500,
-        message: 'error fetching countries'
+        status: error.status || 500,
+        message: 'error fetching countries',
+        data: error.data || ''
       };
     }
   }
